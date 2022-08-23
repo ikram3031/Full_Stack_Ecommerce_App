@@ -1,20 +1,21 @@
 {
-  "name": "mern_blog_project",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Blog app",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ikram3031/MERN-Blog-Website.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "iNovotek",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ikram3031/MERN-Blog-Website/issues"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8"
   },
-  "homepage": "https://github.com/ikram3031/MERN-Blog-Website#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
