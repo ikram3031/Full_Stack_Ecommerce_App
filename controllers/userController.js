@@ -10,6 +10,13 @@ const getAllUsers = async (req,res) => {
     res.status(StatusCodes.OK).json({ users })
 }
 
+const getAllContributors = async (req,res) => {
+    console.log(req.user)
+    // select(-password) removes password from the response
+    const users = await User.find({role:'contributor'}).select('-password')
+    res.status(StatusCodes.OK).json({ users })
+}
+
 const getSignleUser = async (req,res) => {
     const user = await User.findOne({_id:req.params.id}).select('-password')
     if(!user){
@@ -84,5 +91,5 @@ const updateUserPassword = async (req,res) => {
 
 module.exports = {
     getAllUsers, getSignleUser, showCurrentUser, 
-    updateUser, updateUserPassword
+    updateUser, updateUserPassword, getAllContributors
 }
