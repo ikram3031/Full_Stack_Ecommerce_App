@@ -20,6 +20,7 @@ const connectDB = require('./db/connect')
 // Routers
 const authRouter = require('./routes/authRoutes')
 const userRouter = require('./routes/userRoutes')
+const postRouter = require('./routes/postRoutes')
 
 
 //middleware
@@ -67,6 +68,7 @@ app.get('/api/v1', (req,res) => {
 
 app.use('/api/auth', authRouter)
 app.use('/api/users', userRouter)
+app.use('/api/posts', postRouter)
 
 
 app.use(notFoundMiddleware)
