@@ -29,6 +29,7 @@ const CartItem = () => {
                     </div>
 
                 </div>
+                
             </div>
         </div>
     );
